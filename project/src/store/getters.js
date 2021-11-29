@@ -1,0 +1,40 @@
+const getters = {
+  device: state => state.app.device,
+  theme: state => state.app.theme,
+  color: state => state.app.color,
+  token: state => state.user.token,
+  userinfo: state => state.user.userinfo,
+  avatar: state => state.user.avatar,
+  nickname: state => state.user.name,
+  role: state => state.user.role,
+  userInfo: state => state.user.info,
+  addRouters: state => state.permission.addRouters,
+  multiTab: state => state.app.multiTab,
+  pointDataInfoModalShowed: state => state.realData.pointDataInfoModalShowed,//测点信息modal是否已经展示过了，true已经展示，false还未展示
+  realPointList: state => state.realData.realPointList,
+  realEventList: state => state.realData.realEventList,
+  isResponsed: state => state.realData.isResponsed,
+  haveData: state => state.realData.haveData,
+  pointList: state => state.user.pointList,
+  currentPointList: state => state.user.currentPointList,
+  currentPointIndex: state => state.realData.currentPointIndex,
+  currentPointCode: state => state.realData.currentPointCode,
+  currentPointCodeMeasureCode: state => state.realData.currentPointCodeMeasureCode,
+  showColumns: state => state.realData.showColumns,
+  checkedList: state => state.realData.checkedList,
+  leqtype: state => state.realData.leqtype,
+  historyPointCode: state => state.realData.historyPointCode,
+  historyDateRange: state => state.realData.historyDateRange,
+  socket: state => state.realData.socket,
+  realEventSocket: state => state.realData.realEventSocket,
+  displayType: state => state.realData.displayType,
+
+  lpCheckedList: state => state.dataRecord.lpCheckedList,
+  leq1sCheckedList: state => state.dataRecord.leq1sCheckedList,
+  octCheckedList: state => state.dataRecord.octCheckedList,
+  oct13CheckedList: state => state.dataRecord.oct13CheckedList,
+
+  registerState: state => state.user.registerState,
+}
+
+export default getters

@@ -1,0 +1,56 @@
+<template>
+  <div class="CalibratorSelect">
+    <a-select
+      :value="value"
+      :options="options"
+      @change="handleChange"
+      placeholder="请选择"
+      :defaultActiveFirstOption="false"
+      style="width: 100%"
+    >
+      <a-select-option v-for="item in options" :key="item.value">{{ item.label }}</a-select-option>
+    </a-select>
+  </div>
+</template>
+
+<script>
+import { getCalibratorList } from '@/api/api'
+export default {
+  name: 'CalibratorSelect',
+
+  props: ['value', 'id'],
+
+  data() {
+    return {
+      options: [],
+    }
+  },
+
+  mounted() {
+    getCalibratorList({
+      page: {
+        size: 10000,
+        current: 1,
+      },
+    }).then(({ error, response }) => {
+      if (error.code === 0) {
+        this.options = response.records.map((item) => {
+          return {
+            value: item.id,
+            label: `${item.calibrationDeviceTypeName}(${item.calibrationDeviceNo})`,
+          }
+        })
+      }
+    })
+  },
+
+  methods: {
+    handleChange(value) {
+      this.$emit('input', value)
+      this.$emit('change', value)
+    },
+  },
+}
+</script>
+
+

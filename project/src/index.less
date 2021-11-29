@@ -1,0 +1,194 @@
+@media screen and (max-width: 1440px) {
+  html {
+    // zoom: .9
+  }
+}
+
+//改变日期选择框里tag的颜色
+.ant-tag-blue {
+  color: rgb(28, 212, 157);
+  background: rgba(28, 212, 157, 0.1);
+  border-color: rgba(28, 212, 157, 0.5);
+}
+
+//table表头去掉滚动条
+// .ant-table-header {
+//   margin-bottom: 0 !important;
+//   // overflow: hidden !important;
+// }
+
+// .ant-table-body {
+//   overflow: auto !important;
+// }
+
+.ant-checkbox-group {
+  /deep/ .ant-checkbox-wrapper+.ant-checkbox-wrapper {
+    margin-left: 0;
+  }
+
+  /deep/ .ant-checkbox-wrapper {
+    margin-bottom: 12px;
+    margin-right: 8px;
+  }
+}
+
+#nprogress .bar {
+  background: #1BD39B !important; //自定义颜色
+}
+
+//全局公用样式，已在main.js里引入
+.page-common-header {
+  background: #fff;
+  padding: 16px 32px 0;
+  border-bottom: 1px solid #e8e8e8;
+
+  .breadcrumb {
+    margin-bottom: 16px;
+  }
+
+  .title {
+    font-family: PingFangSC-Medium;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+
+  .tabs {
+    ul {
+      padding: 0;
+      padding-top: 10px;
+      margin: 0;
+      margin-left: -32px;
+      list-style: none;
+      display: flex;
+
+      li {
+        font-family: PingFangSC-Medium;
+        font-size: 14px;
+        line-height: 48px;
+        padding: 0px 32px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .active {
+        color: #1BD39B;
+        border-bottom: 2px #1BD39B solid;
+      }
+    }
+  }
+}
+
+.page-common-content {
+  background: #fff;
+  margin: 24px;
+  padding: 24px;
+
+
+  .search-config-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    .search-row {
+      /deep/ .ant-select {
+        width: 200px;
+        margin-right: 16px;
+      }
+
+      /deep/ .ant-calendar-picker {
+        width: 240px;
+        margin-right: 16px;
+      }
+
+      .export-excel-wrapper {
+        display: inline-block;
+        margin-left: 16px;
+      }
+    }
+
+    .config-row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /deep/ .ant-input-group {
+        width: inherit;
+      }
+    }
+  }
+
+
+  /deep/ .ant-pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+  }
+}
+
+.dot {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  transform: translateY(-1px);
+}
+
+.success-dot {
+  background: #52c41a;
+}
+
+.warning-dot {
+  background: #fa8c16;
+}
+
+.error-dot {
+  background: #f5222d;
+}
+
+.disabled-dot {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.success-color {
+  color: #52c41a
+}
+
+.warning-color {
+  color: #fa8c16
+}
+
+.error-color {
+  color: #f5222d
+}
+
+.primary-color {
+  color: #1BD39B
+}
+
+.disabled-color {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+
+
+.CommonModalStyle {
+  .ant-form-item {
+    margin-bottom: 12px;
+    display: flex;
+  }
+  .ant-form-item-label {
+    width: 140px;
+  }
+  .ant-form-item-control-wrapper {
+    flex: 1;
+  }
+}
+
+.amap-modal {
+  padding-bottom: 0;
+  top: 0px;
+}
+
